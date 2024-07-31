@@ -21,8 +21,7 @@ fi
 # Step 2: Edit the file
 echo "Step 2: Edit the file markdown/dragon-tale.md to fix the typos."
 echo "Hint: Use a text editor like nano or vim to edit the file."
-nano --softwrap markdown/dragon-tale.md 
-read -p "Press Enter after you have edited the file..."
+nano --softwrap markdown/dragon-tale.md
 
 # Step 3: Stage the changes
 echo "Step 3: Stage the changes using 'git add markdown/dragon-tale.md'"
@@ -37,14 +36,13 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Step 5: Commit the changes
-echo "Step 5: Commit the changes using 'git commit -m 'Fix typos in Dragons Tale'"
+echo "Step 5: Commit the changes using 'git commit -m \"Fix-typos\"'"
 read -p "Type the command: " commit_cmd
-if [ "$commit_cmd" != "git commit -m 'Fix typos in Dragons Tale'" ]; then
+if [ "$commit_cmd" != 'git commit -m "Fix-typos"' ]; then
   echo "Incorrect command. Please try again."
   exit 1
 fi
-$commit_cmd
+eval $commit_cmd
 if [ $? -ne 0 ]; then
   echo "Failed to commit the changes. Please try again."
   exit 1
