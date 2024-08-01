@@ -5,18 +5,9 @@ echo "Task: Fix the Dragon's Tale."
 echo "Hint: You need to edit the file quests/dragon_slaying.md and then stage and commit your changes."
 
 # Step 1: Checkout to the beginner branch
-echo "Step 1: Checkout to the beginner branch using 'git checkout beginner'"
+echo "Step 1: Checkout to the beginner branch using 'git checkout beginner-your name'"
 cd "$(basename "$repo_url" .git)"
 read -p "Type the command: " checkout_cmd
-if [ "$checkout_cmd" != "git checkout beginner" ]; then
-  echo "Incorrect command. Please try again."
-  exit 1
-fi
-$checkout_cmd
-if [ $? -ne 0 ]; then
-  echo "Failed to checkout to the beginner branch. Please try again."
-  exit 1
-fi
 
 # Step 2: Edit the file
 echo "Step 2: Edit the file markdown/dragon-tale.md to fix the typos."
@@ -95,4 +86,7 @@ if [ $? -ne 0 ]; then
   echo "Failed to reset the state. Please try again."
   exit 1
 fi
+
 echo "Congratulations! You have successfully completed the Beginner Level Challenge!"
+echo "To get your completion badge execute the following command: Rscript ./quests/get-beginner-badge.R "YOUR FIRST AND LAST NAME"
+
