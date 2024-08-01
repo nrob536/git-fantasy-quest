@@ -86,6 +86,7 @@ if [ $? -ne 0 ]; then
   echo "Failed to reset the state. Please try again."
   exit 1
 fi
+
 echo "Congratulations! You have successfully completed the Beginner Level Challenge!"
 echo "To get your completion badge execute the following command: Rscript ./quests/get-beginner-badge.R "YOUR FIRST AND LAST NAME"
 
